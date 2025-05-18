@@ -1,2 +1,18 @@
 # Programacion Funcional /  Proyecto Final
 
+import tkinter as tk
+
+ventanaPrincipal = tk.Tk()
+ventanaPrincipal.title("Proyecto Final / Programacion Funcional")
+ventanaPrincipal.resizable(False , False)
+ventanaPrincipal.geometry()  
+
+
+#1. Capturar la información de un estudiante en una clase Estudiante e irlo almacenando en una lista
+Class Estudiante():
+      def __init__(self, matricula, nombre, carrera):
+        self.matricula = matricula
+        self.nombre = nombre
+        self.carrera = carrera
+
+ListaDeEstudiantes = []
