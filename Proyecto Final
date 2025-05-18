@@ -9,6 +9,7 @@ ventanaPrincipal.geometry()
 
 
 #1. Capturar la información de un estudiante en una clase Estudiante e irlo almacenando en una lista
+
 Class Estudiante():
       def __init__(self, matricula, nombre, carrera):
         self.matricula = matricula
@@ -16,3 +17,16 @@ Class Estudiante():
         self.carrera = carrera
 
 ListaDeEstudiantes = []
+
+
+Carreras = [
+    "Lic. en Inteligencia de Negocios",
+    "Lic. en Contaduría",
+    "Lic. en Negocios Internacionales",
+    "Lic. en Administración de Empresas",
+    "Lic. en Informática"
+]
+
+
+
+
