@@ -1,6 +1,8 @@
 # Programacion Funcional /  Proyecto Final
 
 import tkinter as tk
+import pickle
+
 
 ventanaPrincipal = tk.Tk()
 ventanaPrincipal.title("Proyecto Final / Programacion Funcional")
@@ -16,7 +18,14 @@ Class Estudiante():
         self.nombre = nombre
         self.carrera = carrera
 
-ListaDeEstudiantes = []
+Archivo = "estudiantes.pckl"
+
+if os.path.exists(Archivo):
+    with open(Archivo, "rb") as Lista:
+        estudiantes, matricula_actual = pickle.load(Lista)
+else:
+    estudiantes = []
+    matricula_actual = 1
 
 
 Carreras = [
@@ -27,6 +36,8 @@ Carreras = [
     "Lic. en Informática"
 ]
 
-
+def guardar():
+    with open(Archivo, "wb") as Lista:
+        pickle.dump((estudiantes, matricula_actual), Lista)
 
 
